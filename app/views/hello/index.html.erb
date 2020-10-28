@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>top_page</title>
+  <%= stylesheet_link_tag "top", :media => "all" %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="top-main">
+    <div class="top-main-upper-side">
+      <div class="top-main-header">
+        <h1>memento</h1>
+      </div>
+    </div>
+    <div class="top-main-strip">
+      <div class="top-main-strip-header">
+        <p>Sign</p>
+      </div>
+      <div class="top-main-strip-btn">
+        <%= link_to "sign in", api_v1_events_path %>
+      </div>
+      <div class="top-main-strip-btn">
+        <%= link_to "sign up", new_user_registration_path %>
+      </div>
+    </div>
+    <div class="top-main-strip-string"></div>
+    <div class="top-main-text">
+      <p>You live but once; you might as well be amusing</p>
+    </div>
+    <div class="top-main-line"></div>
+  </div>
+<div class="expression-wrapper">
+  <h5>大切な思い出を書き留めよう</h5>
+</div>
+<div id="card-show">
+<div class="card-deck">
+  <div class="card col-5" style="width:20rem;">
+  <img class="card-img-top" src="/assets/screenshot5.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">給料情報が見やすい</h5>
+    <p class="card-text">検索機能で月ごとの合計金額を調べることができます。</p>
+  </div>
+  </div>
+  <div class="card col-5" style="width:20rem;">
+  <img class="card-img-top" src="/assets/screenshot1.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">カレンダーが使いやすい</h5>
+    <p class="card-text">メモを残したり、予定をまとめて管理することができます。</p>
+  </div>
+  </div>
+</div>
+</div>
+<div class="word-wrapper">
+  <h5>mementoの意味は<br>
+  〔過去の体験・出来事などを思い出すために保管しておく小さな〕思い出の品です。</h5>
+</div>
+<div class="word-wrapper">
+<h5>あなたのmementoを作ろう</h5>
+</div>
+
+  <footer>
+  <div class="footer-wrapper memento">
+    <%= link_to"memento", root_path %>
+  </div>
+  <div class="footer-wrapper explanation">
+    <%= link_to"sign in", api_v1_events_path%>
+    <br>
+    <%= link_to "sign up", new_user_registration_path %>
+    <br>
+    <%= link_to"explanation", root_path(anchor: "card-show") %>
+  </div>
+    <p>&copy;2020 hiroto</p>
+  </footer>
+</body>
+</html>
